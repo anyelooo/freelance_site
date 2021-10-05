@@ -1,0 +1,14 @@
+-Normalize nos ayuda a que nuestro sitio se nos adapate a los distintos navegadores en el mercado 
+    https://necolas.github.io/normalize.css/
+
+- Si queremos agrgar atarajos para la pragroamcion lo hacemos desde los Json que trae por defecto VSC
+    tecleamos shift+CONTROL+p
+    escrbimos user snippets
+    Seleccionamos el CSS.json o el que desees cambiar y creamos nuestro propio atajo.
+
+- En esta web utilizamos el CSS boc-model, que nos ayuda a que las medidas no afecten en la relizacion de la pagina
+    https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+- La pagina de CSSmatic nos ayuda con degradados
+    https://www.cssmatic.com/box-shadow
+

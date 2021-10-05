@@ -1,0 +1,184 @@
+/* Eeste es una propiedad customizada */
+:root{ 
+    /* Definienco mi variables de colores */
+    --blanco: #ffffff;
+    --oscuro:#202021;
+    --primario: #ffc107;
+    --secuendario: #0097a7;
+    --gris:#757575;
+
+    /* Definienfo mis variables de medida */
+    --fuente--principal:3.8rem;
+    --type--fuente:Arial,Helvetica,sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+/* 
+    -El asterisco trabaja como un selector de todo
+    -con la coma podemos pasamos atributos a varias calses o id
+    -after: es un pseudo elemento (Algo que esta pero no existe) despues del elemento
+    -before: es un pseudo elemento (Algo que esta pero no existe) Antes del elemento
+*/
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-size:16px;
+    font-family:var(--type--fuente);
+    background-image: linear-gradient(to top, var(--blanco) 0%, var(--gris) 100%); /* Degradado de color para el fondo de la pagina */
+}
+
+/* 
+- Con lo de arriba podemos trabajar bien con los rem, que es una nueva medida para que se pueda adaptar mejor a los diferentes panatallas
+    el html y el body
+- Las medidas ahora (font-size:16px):
+    1rem = 10px
+*/
+
+/*
+-Con h1 estamos accesando a spna quee esta en mi h1 en mi clase titulo. 
+h1.titulo span{
+    font-size: 2rem;
+    color:brown;
+} */
+
+h1{
+    font-size:var(--fuente--principal);
+}
+
+h2{
+    font-size:2.8rem;
+}
+
+h3{
+    font-size:1.8;
+}
+
+h1,h2,h3{
+    text-align:center;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto; /* top, right, bottom, left */
+}
+
+.titulo{
+    color: var(--primario);
+}
+
+.titulo span{
+    font-size: 2rem;
+    color:var(--oscuro);
+}
+
+.nav-bg{
+    background-color:var(--secuendario);
+}
+
+.navegacion-index{
+    
+    display: flex;
+    flex-direction: column; /* Para nuestro layauts  */
+
+}
+
+.navegacion-index a{
+    display: block;
+    text-align: center;
+    color:var(--blanco);
+    text-decoration:none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+/* hover es lo que nos pode sobreado amarillo en nuestro nav-bar */
+.navegacion-index a:hover{
+    background-color:var(--primario);
+    color:var(--oscuro);
+} 
+
+/* Ejemplo de media query */
+ @media(min-width: 540px){
+     .navegacion-index{
+         flex-direction: row;
+         justify-content:space-between;
+     }
+ }
+
+.hero{
+    background-image:url(../img/p1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 410px;
+    padding:20px;
+    position:relative;  /* El padre dede tener una posicion relativa para que el hijo deba tener uan posicion absoluta */
+    margin-bottom: 2rem;
+}
+
+.contenido-hero{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .7);  /* Definimos la trasparencia */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:0;
+    /* 
+        -Las lineas de arriba se puedes suplir con solo dos lineas:
+            width:100%
+            height:100%
+        -Con esas dos lineas toma todo el valor de seccion de la clase
+    */
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.boton{
+    background-color: var(--secuendario);
+    color:var(--blanco);
+    padding: 1rem 3rem;
+    margin-top:1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform:uppercase; /* Nos pone el texto en mayuscaulas */
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+ @media(min-width:540px){
+     .boton{
+         width: auto;
+     }
+ }
+
+.contenido-hero h2,
+.contenido-hero p{
+    color:var(--blanco);
+
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,1);
+    background-color:var(--blanco);
+    padding:2rem;
+    border-radius:1rem;
+}
+
+ @media(min-width:540px){
+    .servicios{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+ }
